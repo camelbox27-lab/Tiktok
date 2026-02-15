@@ -1,0 +1,72 @@
+{
+  "expo": {
+    "name": "DeutschMitAnna",
+    "slug": "deutsch-mit-anna",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Galeri erişimi TikTok paylaşımları için medya seçmek amacıyla gereklidir.",
+        "NSCameraUsageDescription": "Kamera erişimi içerik oluşturmak için gereklidir.",
+        "UIBackgroundModes": ["fetch", "remote-notification"]
+      }
+    },
+    "android": {
+      "package": "com.deutschmitanna.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES",
+        "READ_MEDIA_VIDEO",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "POST_NOTIFICATIONS",
+        "SCHEDULE_EXACT_ALARM"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Galeri erişimi TikTok paylaşımları için medya seçmek amacıyla gereklidir.",
+          "cameraPermission": "Kamera erişimi içerik oluşturmak için gereklidir."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Galeri erişimi medya dosyalarınıza ulaşmak için gereklidir.",
+          "savePhotosPermission": "Medya kaydetme izni gereklidir.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#00f2ea"
+        }
+      ],
+      "expo-background-fetch"
+    ]
+  }
+}
